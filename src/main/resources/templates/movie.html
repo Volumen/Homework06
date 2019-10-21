@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+
+<h1>Movies</h1>
+    <tr th:each="movie: ${movies}">
+        <td th:text="${movie.getName()}"></td><br>
+        <td th:text="${movie.getYear()}"></td><br>
+        <td th:text="${movie.getProducer()}"></td><br>
+        <p>======================================</p>
+    </tr>
+
+    <form th:action="@{/add}" th:object="${newMovie}" method="post">
+        <p>Name: <input type="text" th:field="*{name}"></p>
+        <p>Year: <input type="text" th:field="*{year}"></p>
+        <p>Producer: <input type="text" th:field="*{producer}"></p>
+        <p><input type="submit"  value="Add Movie"></p>
+    </form>
+    
+
+</body>
+</html>
