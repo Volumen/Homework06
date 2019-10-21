@@ -9,4 +9,5 @@ On start app load two movies, frontend was made in Thymeleaf.
 ![alt text](https://i.imgur.com/dos0lcz.jpg) 
 
 Email received:
+
 ![alt text](https://i.imgur.com/ssxUrts.jpg) 
